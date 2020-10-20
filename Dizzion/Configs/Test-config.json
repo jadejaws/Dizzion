@@ -1,0 +1,24 @@
+{
+    "vCenter": {
+        "vCenterlist": [
+            "mcnestedvcsa.mcnet.pri",
+            "mcvcenter.mcnet.pri"
+        ]
+    },
+    "KeePass": {
+        "databasepath": "\b\bmcnas\bPrivate\bMcnet.kdbx",
+        "KeePassMGMTAccountGroupPath": "Active Directory",
+        "KeePassMGMTAccountEntry": "Vester"
+    },
+    "Options": {
+        "LockdownMode": "Disabled",
+        "InputDomain": "McNet",
+        "TargetDomain": "OddDomain",
+        "Report": true,
+        "SMTPServer": "mail.jadejaws.org",
+        "DeliveryAddress": "Kevin@Jadejaws.org",
+        "SenderAddress": "vcCleanupReport@jadejaws.org",
+        "LogFolderPath": null,
+        "LogFileName": null
+    }
+}
