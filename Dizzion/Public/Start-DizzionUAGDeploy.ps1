@@ -1,10 +1,9 @@
 <#
     .SYNOPSIS
-    Starts a vCenter cleanup from a provided list of vCenters in an array format. This performs several actions to ready the hosts and entities of the target vCenter.
-    This is a post process for after a domain migration of a Refinitiv vCenter from mgmt domain to prrft domain.
+    Starts a Dizzion deploy from the list of available optoins
 
     .DESCRIPTION
-    The purpose of this script is to ready the hosts and entities of the target from an input array and prepare them for proper operation in the PRRFT domain.
+    The purpose of this script is to deploy a UAC appliance using provided Demo materials
 
     .NOTES
     Author: Kevin McClure
@@ -238,7 +237,7 @@ function Start-DizzionUAGDeploy () {
     $LibraryTransferStatus = Add-DizzionTemplateToLibrary -LibraryName $LibaryName -VMname $TemplateVMName -LibItemName $LibraryItemName -Description '3.7 UAG'
 
     #Sleep for now and wait for the operations to complete with transfer to library. Final product would query the task status and wait to start next operations when completed.
-    Start-Sleep -Seconds 1000
+    Start-Sleep -Seconds 600
 
     #Deploy VM from Content Library
     $VMDeploy = New-DizzionUAG -ContentLibraryItem $LibraryItemName -VMName $VMName -Location $Location -Datastore $Datastore -ResourcePool $Cluster
